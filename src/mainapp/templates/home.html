@@ -1,11 +1,14 @@
-<html>
+{% extends "base.html" %}
 
-<head>
-    <title>Welcome home!</title>
-</head>
-<body>
+{% block title %}Royal Hotels{% endblock %}
 
-    <h1>Welcome {{ user | title }}!</h1>
-    <h1>We are thrilled to have you on our staff!</h1>
-</body>
-</html>
+{% block header %}Welcome to the international chain of Royal Hotels!{% endblock %}
+
+{% block mainContent %}
+
+<h3>Text of the main body goes here</h3>
+
+
+
+
+{% endblock %}
