@@ -1,6 +1,10 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def home(request):
     user = request.user
-    return HttpResponse("<h1>Welcome user!  <br> How are you doing today, {}?</h1>".format(user))
+    context = {
+        'user': user,
+    }
+    return render(request, "home.html", context)
