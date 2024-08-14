@@ -10,9 +10,19 @@
 
     <ul>
         {% for item in breakfastProducts %}
-        <li>{{ item }}</li>
+            {% if item == "Coffee" %}
+                ☕ {{ item }} <br>
+            {% elif item == "Tea" %}
+                🍵 {{ item }} <br>
+            {% elif item == "Fruit juices"%}
+                🧃 {{ item }} <br> &nbsp;
+            {% else %}
+                <li>🍴&nbsp; &nbsp;{{ item }}</li>
+            {% endif %}
         {% endfor %}
     </ul>
+
+
 
 
 {% endblock %}
