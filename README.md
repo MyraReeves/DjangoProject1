@@ -1,3 +1,3 @@
-# Django Project #1
+# Django
 
-First Django project. Created as a student of The Tech Academy.  This project creates a database for a hotel.  It includes a model for the hotel staff to add catering options with prices.
+This school project was my first experience using Django. The assignment included the use of a virtual environment.  As an introduction to Django, the project included a database with a model for mock hotel staff to log-in and add catering options with prices, in addition to the use of template tags, For and If loops accessing an array, and .
