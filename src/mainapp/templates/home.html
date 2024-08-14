@@ -6,9 +6,13 @@
 
 {% block mainContent %}
 
-<h3>Text of the main body goes here</h3>
+<h3>Enjoy our daily array of healthy breakfast options:</h3>
 
-
+    <ul>
+        {% for item in breakfastProducts %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
 
 
 {% endblock %}
