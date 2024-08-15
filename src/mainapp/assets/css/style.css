@@ -10,33 +10,40 @@ body {
 	position: relative;
 	overflow: hidden;
 }
+
 html, body {
     height: 100%;
     margin: 0;
 	padding: 0;
 }
+
 p {
 	padding: 2px 16px;
 	font-size: 15px;
 	font-family: 'Lato', Georgia, sans-serif;
 	color: #666666;
 }
+
 h1 {
-    color: #0404B4;
+    color: #030396;
     font-family: 'Lobster';
+    font-size: 30pt;
     text-shadow: 3px 2px 1px rgba(181, 184, 255, 1);
     margin:0 auto;
 }
+
 h2 {
     color: #0404B4;
     font-weight: 900;
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
+
 h2 span {
     font-variant: small-caps;
     padding: 2px 16px;
 }
+
 .container {
     padding: 2px 16px;
 }
@@ -50,6 +57,7 @@ h2 span {
 .box>* {
 	flex: 1 1 160px;
 }
+
 .center-img {
     display: block;
     margin-top: 5%;
@@ -58,6 +66,7 @@ h2 span {
     margin-right: auto;
     width: 70%;
 }
+
 ul.topnav {
     list-style-type: none;
     margin: 0;
@@ -92,10 +101,14 @@ ul.topnav li a:hover {
 ul.topnav li.icon {
 	display: none;
 }
+
+
 .header-title {
 	padding: 2px 16px;
 	text-align: center;
 }
+
+
 .price {
 	padding: 0px 0px;
 	display: flex;
@@ -167,6 +180,7 @@ ul.topnav li.icon {
     align-items: center;
     width: 100%;
 }
+
 .btn {
 	flex-grow: 2;
     justify-content: center;
@@ -184,6 +198,7 @@ ul.topnav li.icon {
     border: 2px solid silver;
     border-radius: 5px;
 }
+
 .btn:hover {
     background-color: #355664;
     color: white;
@@ -191,6 +206,7 @@ ul.topnav li.icon {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 	transition: opacity 0.3s ease-in-out;
 }
+
 input[type="submit"] {
     flex-grow: 1;
     width: 10%;
@@ -215,6 +231,8 @@ input[type="submit"]:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 	transition: opacity 0.3s ease-in-out;
 }
+
+
 select {
 	padding: 4px 10px;
 	width: 40%;
@@ -224,6 +242,8 @@ select {
     border-radius: 5px;
     box-shadow: 0 0 10px #E8E8E8 inset;
 }
+
+
 input, textarea {
     width: 100%;
     margin: 1% 0 0 0;
@@ -233,6 +253,8 @@ input, textarea {
     border-radius: 5px;
     border: 2px solid silver;
 }
+
+
 label {
 	display: inline-block;
     width: 95%;
@@ -242,6 +264,8 @@ label {
     line-height: 18px;
     font-size: 20px;
 }
+
+
 #block-footer {
     clear: both;
     display: flex;
@@ -261,25 +285,30 @@ label {
     line-height: 10px;
 	font-family:'PT Sans', Arial, Helvetica, sans-serif;
 }
+
 #footer-left {
     width: 40%;
     text-align: right;
 }
+
 #block-footer{
 	float:left;
 	clear:both;
 	width:100%;
 }
+
 #block-footer a {
 	color: white;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	text-decoration: none;
 	outline: medium none;
 }
+
 #block-footer a:hover {
     color: #CABE96;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
 }
+
 .bg_img {
     background-color: lightblue;
     background-image: url('/static/images/hotel_img3.jpg');
