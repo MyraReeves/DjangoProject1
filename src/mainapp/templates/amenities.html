@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}RH - Amenities{% endblock %}
+
+{% block header %}Our Amenities{% endblock %}
+
+{% block mainContent %}
+<h2>Quality, comfort, and convenience while traveling</h2>
+
+<div id="amenity">
+    <h3>Enjoy our daily array of healthy breakfast options:</h3>
+
+        <ul>
+            {% for item in breakfastProducts %}
+                {% if item == "Coffee" %}
+                    ☕ {{ item }} <br>
+                {% elif item == "Tea" %}
+                    🍵 {{ item }} <br>
+                {% elif item == "Fruit juices"%}
+                    🧃 {{ item }} <br> &nbsp;
+                {% else %}
+                    <li>🍴&nbsp; &nbsp;{{ item }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+</div>
+
+{% endblock %}

@@ -6,21 +6,7 @@
 
 {% block mainContent %}
 
-<h3>Enjoy our daily array of healthy breakfast options:</h3>
 
-    <ul>
-        {% for item in breakfastProducts %}
-            {% if item == "Coffee" %}
-                ☕ {{ item }} <br>
-            {% elif item == "Tea" %}
-                🍵 {{ item }} <br>
-            {% elif item == "Fruit juices"%}
-                🧃 {{ item }} <br> &nbsp;
-            {% else %}
-                <li>🍴&nbsp; &nbsp;{{ item }}</li>
-            {% endif %}
-        {% endfor %}
-    </ul>
 
 
 
