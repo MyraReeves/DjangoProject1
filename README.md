@@ -1,5 +1,5 @@
 # 💻 Django
 
-These files are part of my first experience using a Django web framework. The school assignment included practice using the `venv` module to create isolated virtual Python environments.
+These files are part of my first experience using a Django web framework. The school assignment included practice using the `venv` module to create isolated virtual Python environments. It also included brief interaction (querying the objects manager and creating a Product object) with the app thru the shell within the command prompt.
 
 As an introduction to Django, the project included a server with a database containing a model for the staff of a mock hotel to log-in and add catering items for sale.  In addition, the assignment used template tags to make the structure more modular, dictionary objects being passed between the view functions and the templates, an HTML homepage containing For and If loops to access an array, and used static CSS and image files.
