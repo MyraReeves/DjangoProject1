@@ -24,8 +24,6 @@ p {
 	color: #666666;
 }
 
-
-
 h1 {
     color: #030396;
     font-family: 'Lobster';
@@ -135,10 +133,13 @@ ul.topnav li.icon {
     margin-left: auto;
     margin-right: auto;
 }
-/* This controls the form size and contents */
+
+
+
+/* Admin form size and contents */
 .admin_panel {
     margin: 0 auto;
-    width: 50%;
+    width: 20%;
     height: 80%;
     background-color: #fffaf4;
 	border: 1px solid #d6d6d6;
@@ -166,14 +167,6 @@ ul.topnav li.icon {
 	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 	transition: opacity 0.3s ease-in-out;
 }
-/* form item container */
-.frmObject_container {
-	display: block;
-    width: 80%;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-}
 
 .fieldWrapper{
 	display: block;
@@ -182,24 +175,31 @@ ul.topnav li.icon {
     padding: 0;
     text-align: center;
 }
-/* form button container */
-.frmBtn_container {
+
+.form {
+	display: block;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.formButton_container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
 }
 
-
-
-.btn {
+button {
 	flex-grow: 2;
     justify-content: center;
     text-align: center;
     display: inline-block;
-    width: 150px; /* button size */
+    width: 120px;
     margin: 2% 2% 2% 2%;
     color: black;
+    background-color: white;
     padding: 10px 0px;
     text-decoration: none;
     font-size: 14px;
@@ -210,7 +210,26 @@ ul.topnav li.icon {
     border-radius: 5px;
 }
 
-.btn:hover {
+.button1 {
+	flex-grow: 2;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    width: 120px;
+    margin: 2% 2% 2% 2%;
+    color: black;
+    background-color: white;
+    padding: 10px 0px;
+    text-decoration: none;
+    font-size: 14px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid silver;
+    border-radius: 5px;
+}
+
+.button1:hover {
     background-color: #355664;
     color: white;
     border: 2px solid #b3b3b3;
@@ -249,7 +268,7 @@ input[type="submit"]:hover {
 
 select {
 	padding: 4px 10px;
-	width: 40%;
+	width: 90%;
 	display: inline-block;
 	margin: 1% 0% 0 1%;
 	border: 2px solid silver;
@@ -271,7 +290,8 @@ label {
 	display: inline-block;
     width: 95%;
     text-align: left;
-    margin: 1% 0 0 0;
+    margin-left: 1pt;
+    margin-top: 1%;
     color: black;
     line-height: 18px;
     font-size: 20px;
