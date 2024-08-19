@@ -20,11 +20,11 @@ def details(request, pk):       # pk stands for primary key.
     # Convert the string value of the primary key into a numeric integer:
     pk = int(pk)
 
-    # Store in a variable the record within the Product model that's associated with the primary key (a dictionary object).
+    # Query the database and store in a variable the database record (from within the Product model) associated with the requested primary key (pk is a dictionary object).
     # If it doesn't exist, return a 404 error:
     item = get_object_or_404(Product, pk=pk)
 
-    # Store in a variable information from the POST request. Make the instance equal to the above-created variable.
+    # Store in a variable the information from the POST request. Make the instance equal to the above-created variable.
     # If information can't be retrieved, set a value of None:
     form1 = ProductForm(data=request.POST or None, instance=item)
 
@@ -39,6 +39,6 @@ def details(request, pk):       # pk stands for primary key.
         else:
             print(form1.errors)
 
-    # Put the form information from the database of the requested item onto an HTML page for the user to see:
+    # Render the form information from the database of the requested item onto an HTML page for the user to see:
     else:
         return render(request, 'products/food_item.html', {'form': form1})
