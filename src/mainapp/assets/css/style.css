@@ -241,13 +241,13 @@ button {
 
 input[type="submit"] {
     flex-grow: 1;
-    width: 10%;
+    width: 5%;
     justify-content: center;
     text-align: center;
     display: inline-block;
     margin: 2% 2% 2% 2%;
     color: black;
-    padding: 9px 0px 9px 0px;
+    padding: 9px 0px;
     text-decoration: none;
     font-size: 14px;
     -webkit-transition-duration: 0.4s; /* Safari */
