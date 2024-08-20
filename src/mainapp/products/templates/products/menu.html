@@ -17,7 +17,7 @@
                 {% endfor %}
             </select>
             <div class="formButton_container" style="margin:10pt 0pt 10pt 5pt;">
-                <a href=""><button type="button" class="button1" style="background-color: #ddc3dd; width: 150px;">Create New Product</button></a>
+                <a href="{% url 'createFood' %}"><button type="button" class="button1" style="background-color: #ddc3dd; width: 150px;">Create New Product</button></a>
                 <a href="{% url 'home' %}"><button type="button" class="button1" style="background-color: #c7c9fc; margin-left: 10pt;">Logout</button></a>
             </div>
         </div>
