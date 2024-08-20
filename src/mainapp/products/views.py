@@ -5,7 +5,7 @@ from .models import Product
 
 
 # Define all needed methods/views below.
-# Reminder: methods start with lowercase letters.
+# Reminder: methods should be ALL lowercase letters
 
 
 def admin_console(request):
@@ -58,7 +58,7 @@ def delete(request, pk):
 # ________________________________________________________________________________________
 
 
-def confirmedDelete(request):
+def confirmed_delete(request):
     if request.method == 'POST':
         # Create form
         form = ProductForm(request.POST or None)
@@ -67,3 +67,17 @@ def confirmedDelete(request):
             return redirect('admin_console')
     else:
         return redirect('admin_console')
+
+# ________________________________________________________________________________________
+
+
+def create_item(request):
+    form = ProductForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('admin_console')
+    else:
+        print(form.errors)
+        form = ProductForm()
+    context = {'form': form,}
+    return render(request, 'products/new_food.html', context)
