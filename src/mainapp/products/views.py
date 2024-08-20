@@ -52,8 +52,9 @@ def delete(request, pk):
     if request.method == 'POST':
         item.delete()
         return redirect('admin_console')
-    context = {"item": item}
-    return render(request, "products/confirmDelete.html", context)
+    else:
+        context = {"item": item}
+        return render(request, "products/confirmDelete.html", context)
 
 # ________________________________________________________________________________________
 
@@ -79,5 +80,5 @@ def create_item(request):
     else:
         print(form.errors)
         form = ProductForm()
-    context = {'form': form,}
-    return render(request, 'products/new_food.html', context)
+        context = {'form': form,}
+        return render(request, 'products/new_food.html', context)
