@@ -55,3 +55,15 @@ def delete(request, pk):
     context = {"item": item}
     return render(request, "products/confirmDelete.html", context)
 
+# ________________________________________________________________________________________
+
+
+def confirmedDelete(request):
+    if request.method == 'POST':
+        # Create form
+        form = ProductForm(request.POST or None)
+        if form.is_valid():
+            form.delete()
+            return redirect('admin_console')
+    else:
+        return redirect('admin_console')
