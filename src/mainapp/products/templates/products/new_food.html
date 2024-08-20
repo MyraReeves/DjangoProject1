@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}RH - Add to menu{% endblock %}
+
+{% block header %}Create a New Menu Item!{% endblock %}
+
+{% block mainContent %}
+
+<div class="admin_panel">
+    <form method="POST" action="{% url 'createFood' %}">
+        <div>
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_p }}
+        </div>
+        <div>
+            <input type="submit" class="button1" value="Create New Food Product" name="Save_Item">
+            <a href="{% url 'admin_console' %}"><button type="button" value="Cancel" class="button1" style="background-color: #c7c9fc; margin-left: 10pt;">Cancel</button></a>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
