@@ -8,11 +8,11 @@ from .models import Product
 # Reminder: methods start with lowercase letters.
 
 
-
 def admin_console(request):
     menu_data = Product.objects.all()
     return render(request, 'products/menu.html', {'menu': menu_data})
 
+# ________________________________________________________________________________________
 
 
 def details(request, pk):       # pk stands for primary key.
@@ -42,3 +42,16 @@ def details(request, pk):       # pk stands for primary key.
     # Render the form information from the database of the requested item onto an HTML page for the user to see:
     else:
         return render(request, 'products/food_item.html', {'form': form1})
+
+# ________________________________________________________________________________________
+
+
+def delete(request, pk):
+    pk = int(pk)
+    item = get_object_or_404(Product, pk=pk)
+    if request.method == 'POST':
+        item.delete()
+        return redirect('admin_console')
+    context = {"item": item}
+    return render(request, "products/confirmDelete.html", context)
+
