@@ -8,5 +8,6 @@ urlpatterns = [
     path('admin_console', views.admin_console, name='admin_console'),
     path('<int:pk>/details/', views.details, name='details'),
     path('<int:pk>/delete/', views.delete, name='delete'),
-    path('delete_confirmation/', views.confirmedDelete, name='confirmed'),
+    path('delete_confirmation/', views.confirmed_delete, name='confirmed'),
+    path('new_food/', views.create_item, name='createFood'),
 ]
