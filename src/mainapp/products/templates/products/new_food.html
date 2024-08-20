@@ -5,20 +5,20 @@
 {% block header %}Create a New Menu Item!{% endblock %}
 
 {% block mainContent %}
-
-<div class="admin_panel">
-    <form method="POST" action="{% url 'createFood' %}">
-        <div>
-            {% csrf_token %}
-            {{ form.non_field_errors }}
-            {{ form.as_p }}
-        </div>
-        <div>
-            <input type="submit" class="button1" value="Create New Food Product" name="Save_Item">
-            <a href="{% url 'admin_console' %}"><button type="button" value="Cancel" class="button1" style="background-color: #c7c9fc; margin-left: 10pt;">Cancel</button></a>
-        </div>
-    </form>
-</div>
-
+<main style="overflow: visible;">
+    <div class="admin_panel" style="width: 50%; overflow: visible; height: 1000px;">
+        <form method="POST" action="{% url 'createFood' %}" style="overflow: auto; height: 1000px;">
+            <div style="margin-top: 20px; margin-left: 10px; width: 80%; overflow: visible; height: 400pt; line-height: 150%;">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {{ form.as_p }}
+            </div>
+            <div style="overflow: visible; height: 365pt; margin-top: 15px;">
+                <input type="submit" value="Create New Food Product" name="Save_Item" style="width: auto; padding: 8pt;">
+                <a href="{% url 'admin_console' %}"><button type="button" value="Cancel" class="button1" style="background-color: #c7c9fc; margin-left: 10pt; margin-bottom: 20px;">Cancel</button></a>
+            </div>
+        </form>
+    </div>
+</main>
 
 {% endblock %}
