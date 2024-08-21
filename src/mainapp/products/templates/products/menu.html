@@ -10,7 +10,7 @@
     <form name="productForm" method="POST" action="">
         <div>
             {% csrf_token %}
-            <label for="menu_id" style="margin-left: 8pt; margin-top: 10pt;">Select a menu item from the list to edit:</label>
+            <label for="menu_id" style="margin-left: 8pt; margin-top: 10pt;">Select an item to edit:</label>
             <select id="menu_id" style="width: 90%;" name="menuEdit" onChange="top.location.href=this.options[this.selectedIndex].value;">
                 {% for item in menu %}
                     <option value="../{{ item.pk }}/details/">{{ item.name }}</option>
@@ -24,10 +24,10 @@
     </form>
 </div>
 
-<h4 style="color: #d1f5ff; margin:10px; font-size: 16pt;">Our Current Menu:</h4>
-    <ul class="menu1" style="background-color: #d1f5ff; width: 20%; margin:10px; padding: 8px 20px; line-height: 20px;">
+<h4 style="color: #d1f5ff; margin:10px 30px; font-size: 16pt;">Menu:</h4>
+    <ul class="menu1" style="background-color: #d1f5ff; width: 50%; margin-left:30px; padding: 8px 20px; line-height: 20px; overflow: auto;">
     {% for item in menu %}
-        <li>{{ item.name }}: &nbsp; ${{item.price}}</li>
+        <li><b>{{ item.name }}</b>: &nbsp; ${{item.price}} <br> {{item.description}} <br><br></li>
     {% endfor %}
     </ul>
 
