@@ -6,14 +6,14 @@
 
 {% block mainContent %}
 
-<form method="POST" action=".">
+<form method="POST" action="." style="background-color: black; margin-top: 20pt;">
     {% csrf_token %}
     <h2>Confirmation Needed:</h2>
-    <p>Are you sure you wish to delete {{item.name}} from our database?</p>
+    <p style="color: white; font-size: 18pt;">Are you sure you wish to delete {{item.name}} from our database?</p>
 
     {{ item.as_p }}
 
-    <input type="submit" value="Yes, I am sure! Delete it!" class="button1">
+    <input type="submit" value="Yes, I am sure! DELETE IT!" class="button1" style="width: 300px;">
     <a href="{% url 'admin_console' %}"><button type="button" class="button1" style="background-color: #c7c9fc; margin-left: 10pt; width: 200px;">Cancel</button></a>
 </form>
 
