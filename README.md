@@ -4,4 +4,9 @@ These files are part of my first experience using a Django web framework. The sc
 
 The main focus of the second half of the project was to create a website GUI for the mock restaurant management to be able to Create, Read, Update, and Delete the food menu items easily and directly from HTML webpages.
 
-Other details of the project included:  learning how to use static files within Django, template tags to make the structure more modular, dictionary objects passed between the views methods and the templates, and For and If loops to access the array of restaurant menu items.
+Other details of the school assignment included:
+
+* Learning how to use static files within Django
+* Template tags to make the structure more modular
+* Dictionary objects passed between the views methods and the templates
+* For and If loops to access the array of restaurant menu items
